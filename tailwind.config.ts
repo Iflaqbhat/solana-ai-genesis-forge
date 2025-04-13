@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,14 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				terranode: {
+					teal: '#115E59',
+					amber: '#D97706',
+					slate: '#334155',
+					emerald: '#059669',
+					indigo: '#4F46E5',
+					gray: '#1F2937'
 				}
 			},
 			borderRadius: {
@@ -84,11 +93,43 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-slow': {
+					'0%, 100%': {
+						opacity: 1
+					},
+					'50%': {
+						opacity: 0.5
+					}
+				},
+				'glow': {
+					'0%, 100%': {
+						boxShadow: '0 0 5px rgba(5, 150, 105, 0.5)'
+					},
+					'50%': {
+						boxShadow: '0 0 20px rgba(5, 150, 105, 0.8)'
+					}
+				},
+				'float': {
+					'0%, 100%': {
+						transform: 'translateY(0)'
+					},
+					'50%': {
+						transform: 'translateY(-10px)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-slow': 'pulse-slow 3s ease-in-out infinite',
+				'glow': 'glow 2s ease-in-out infinite',
+				'float': 'float 6s ease-in-out infinite'
+			},
+			backgroundImage: {
+				'terranode-gradient': 'linear-gradient(to bottom right, #0F172A, #115E59)',
+				'card-gradient': 'linear-gradient(to bottom right, rgba(51, 65, 85, 0.9), rgba(17, 94, 89, 0.9))',
+				'glow-gradient': 'radial-gradient(circle, rgba(5, 150, 105, 0.15) 0%, transparent 70%)'
 			}
 		}
 	},
